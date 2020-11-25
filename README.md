@@ -1,4 +1,4 @@
-# Assingment Adventskalendar
+# Assignment Adventskalendar
 
 ## 1. Anforderungskatalog:
 
