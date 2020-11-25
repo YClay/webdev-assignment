@@ -19,8 +19,3 @@
 - 15: Konfigurierbarkeit (Upload, Datum simulieren)                               
 - 05: Sinvolle Zusatzfunktionen   
 
-Test Test
-Test
-Test
-
-funktioniert das???
