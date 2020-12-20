@@ -6,6 +6,22 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.open {
+    background-color: #5a0101;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 40px;
+    border: none;
+}
+
+.content {
+    margin: 0;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
 
 .background {
     background: url(calendar.jpg);
@@ -13,41 +29,6 @@
     background-repeat: no-repeat;
 }
 
-header {
-    /*transition: 0.5s;*/
-    z-index: 10;
-    position: fixed;
-    background-color: rgb(39, 39, 39);
-    width: 100%;
-    padding: 10px 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header .logo {
-    color: #fff;
-    font-weight: 700;
-    font-size: 2rem;
-    text-decoration: none;
-}
-
-/*Navigation*/
-header .navigation {
-    position: relative;
-    display: flex;
-}
-
-header .navigation li {
-    list-style: none;
-    margin-left: 30px;
-}
-
-header .navigation li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 500;
-}
 
 .calendar {
     position: relative;
@@ -57,21 +38,15 @@ header .navigation li a {
     justify-content: center;
     align-items: center;
     text-align: center;
-}
-
-.container {
     width: 60%;
     margin-left: 20%;
     margin-right: 20%;
     margin-bottom: 500px;
     display: flex;
     flex-wrap: wrap;
-    padding-top: 0px;
-    justify-content: center;
-    align-items: center;
 }
 
-.container .card {
+.calendar .card {
     position: relative;
     width: 200px;
     height: 320px;
@@ -83,62 +58,462 @@ header .navigation li a {
     transition: 0.5s;  
 }
 
-.container .card .circle {
-    z-index: 1;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    clip-path: circle(130px at center 0);
-    text-align: center;
-}
-
-.container .card .circle h2 {
+h2 {
     position: relative;
     color: #fff;
     font-size: 4.5em;
     padding: 30px 0;
 }
 
-.container .card .content {
-    position: absolute;
-    bottom: 20px;
-}
-
-.container .card .content p {
-    color: #666;
-}
-
-.container .card .content a {
-    position: relative;
-    display: inline-block;
-    padding: 10px 20px;
-    background: #000;
-    color: #fff;
-    border-radius: 40px;
-    text-decoration: none;
-    margin-top: 20px;    
-}
-
-.container .card:hover {
+.calendar .card:hover {
     transform: scale(1.1);
 }
 
-.container .card .content img {
-    top: 20px;
-    position: relative;
-    height: 240px;
+button:hover {
+    background-color: rgba(161, 7, 7, 0.973);
 }
 
-.container .card .circle,
-.container .card .content a {
-    background: #5a0101;
-}
 
-/*  .btn-test {
+
+.one-img {
+    width: 250px;
+    height: 320px;
+    background-image: url(images/one.png);
     position: absolute;
+    display: none;
+}
+
+.two-img {
+    width: 250px;
+    height: 320px;
+    background-image: url(images/two.jpg);
+    position: absolute;
+    display: none;
+}
+
+.three-img {
+    width: 250px;
+    height: 320px;
+    background-image: url(images/three.jpg);
+    position: absolute;
+    display: none;
+}
+
+.four-img {
+    width: 250px;
+    height: 320px;
+    background-image: url(images/four.jpg);
+    position: absolute;
+    display: none;
+}
+
+.five-img {
+    width: 250px;
+    height: 320px;
+    background-image: url(images/five.jpg);
+    position: absolute;
+    display: none;
+}
+
+.six-img {
+    width: 250px;
+    height: 320px;
+    background-image: url(images/six.jpg);
+    position: absolute;
+    display: none;
+}
+
+.seven-img {
+    width: 250px;
+    height: 320px;
+    background-image: url(images/seven.jpg);
+    position: absolute;
+    display: none;
+}
+
+.eight-img {
+    width: 250px;
+    height: 320px;
+    background-image: url(images/eight.jpeg);
+    position: absolute;
+    display: none;
+}
+
+.nine-img {
+    width: 250px;
+    height: 320px;
+    background-image: url(images/nine.jpg);
+    position: absolute;
+    display: none;
+}
+
+.ten-img {
+    width: 250px;
+    height: 320px;
+    background-image: url(images/ten.jpg);
+    position: absolute;
+    display: none;
+}
+
+.eleven-img {
+    width: 250px;
+    height: 320px;
+    background-image: url(images/eleven.jpg);
+    position: absolute;
+    display: none;
+}
+
+.twelve-img {
+    width: 250px;
+    height: 320px;
+    background-image: url(images/twelve.jpg);
+    position: absolute;
+    display: none;
+}
+
+.thirteen-img {
+    width: 250px;
+    height: 320px;
+    background-image: url(images/thirteen.jpg);
+    position: absolute;
+    display: none;
+}
+
+.fourteen-img {
+    width: 250px;
+    height: 320px;
+    background-image: url(images/fourteen.jpg);
+    position: absolute;
+    display: none;
+}
+
+.fifteen-img {
+    width: 250px;
+    height: 320px;
+    background-image: url(images/fifteen.jpg);
+    position: absolute;
+    display: none;
+}
+
+.sixteen-img {
+    width: 250px;
+    height: 320px;
+    background-image: url(images/sixteen.jpg);
+    position: absolute;
+    display: none;
+}
+
+.seventeen-img {
+    width: 250px;
+    height: 320px;
+    background-image: url(images/seventeen.jpg);
+    position: absolute;
+    display: none;
+}
+
+.eighteen-img {
+    width: 250px;
+    height: 320px;
+    background-image: url(images/eighteen.jpg);
+    position: absolute;
+    display: none;
+}
+
+.nineteen-img {
+    width: 250px;
+    height: 320px;
+    background-image: url(images/nineteen.jpg);
+    position: absolute;
+    display: none;
+}
+
+.twenty-img {
+    width: 250px;
+    height: 320px;
+    background-image: url(images/twenty.jpg);
+    position: absolute;
+    display: none;
+}
+
+.twentyone-img {
+    width: 250px;
+    height: 320px;
+    background-image: url(images/twentyone.png);
+    position: absolute;
+    display: none;
+}
+
+.twentytwo-img {
+    width: 250px;
+    height: 320px;
+    background-image: url(images/twentytwo.jpg);
+    position: absolute;
+    display: none;
+}
+
+.twentythree-img {
+    width: 250px;
+    height: 320px;
+    background-image: url(images/twentythree.jpg);
+    position: absolute;
+    display: none;
+}
+
+.twentyfour-img {
+    width: 250px;
+    height: 320px;
+    background-image: url(images/twentyfour.jpg);
+    position: absolute;
+    display: none;
+}
+
+.circle-1 {
     z-index: 1;
-    top: 180;
-    width: 200px;
-}*/
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #5a0101;
+    clip-path: circle(130px at center 0);
+    text-align: center;
+}
+
+.circle-2 {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #5a0101;
+    clip-path: circle(130px at center 0);
+    text-align: center;
+}
+
+.circle-3 {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #5a0101;
+    clip-path: circle(130px at center 0);
+    text-align: center;
+}
+
+.circle-4 {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #5a0101;
+    clip-path: circle(130px at center 0);
+    text-align: center;
+}
+
+.circle-5 {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #5a0101;
+    clip-path: circle(130px at center 0);
+    text-align: center;
+}
+
+.circle-6 {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #5a0101;
+    clip-path: circle(130px at center 0);
+    text-align: center;
+}
+
+.circle-7 {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #5a0101;
+    clip-path: circle(130px at center 0);
+    text-align: center;
+}
+
+.circle-8 {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #5a0101;
+    clip-path: circle(130px at center 0);
+    text-align: center;
+}
+
+.circle-9 {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #5a0101;
+    clip-path: circle(130px at center 0);
+    text-align: center;
+}
+
+.circle-10 {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #5a0101;
+    clip-path: circle(130px at center 0);
+    text-align: center;
+}
+
+.circle-11 {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #5a0101;
+    clip-path: circle(130px at center 0);
+    text-align: center;
+}
+
+.circle-12 {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #5a0101;
+    clip-path: circle(130px at center 0);
+    text-align: center;
+}
+
+.circle-13 {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #5a0101;
+    clip-path: circle(130px at center 0);
+    text-align: center;
+}
+
+.circle-14 {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #5a0101;
+    clip-path: circle(130px at center 0);
+    text-align: center;
+}
+
+.circle-15 {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #5a0101;
+    clip-path: circle(130px at center 0);
+    text-align: center;
+}
+
+.circle-16 {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #5a0101;
+    clip-path: circle(130px at center 0);
+    text-align: center;
+}
+
+.circle-17 {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #5a0101;
+    clip-path: circle(130px at center 0);
+    text-align: center;
+}
+
+.circle-18 {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #5a0101;
+    clip-path: circle(130px at center 0);
+    text-align: center;
+}
+
+.circle-19 {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #5a0101;
+    clip-path: circle(130px at center 0);
+    text-align: center;
+}
+
+.circle-20 {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #5a0101;
+    clip-path: circle(130px at center 0);
+    text-align: center;
+}
+
+.circle-21 {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #5a0101;
+    clip-path: circle(130px at center 0);
+    text-align: center;
+}
+
+.circle-2 {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #5a0101;
+    clip-path: circle(130px at center 0);
+    text-align: center;
+}
+
+.circle-22 {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #5a0101;
+    clip-path: circle(130px at center 0);
+    text-align: center;
+}
+
+.circle-23 {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #5a0101;
+    clip-path: circle(130px at center 0);
+    text-align: center;
+}
+
+.circle-24 {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #5a0101;
+    clip-path: circle(130px at center 0);
+    text-align: center;
+}
 
