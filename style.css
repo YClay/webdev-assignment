@@ -64,17 +64,7 @@
     display: flex;
     flex-wrap: wrap;
 }
-/*
-.editing_mode {
-    background-color: #5a0101;
-    color: #fff;
-}
 
-.text_toggle_admin {
-    background-color: #5a0101;
-    color: #fff;
-}
-*/
 .toggle_admin {
     background-color: #5a0101;
     color: #fff;
