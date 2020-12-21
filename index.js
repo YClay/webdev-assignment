@@ -1,6 +1,17 @@
+// Datumsabfrage für aktueller Tag
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //Januar ist 0!
+var yyyy = today.getFullYear();
+  
+var checkDoor = yyyy + mm + dd;
+today = yyyy + '-' + mm + '-' + dd;
+  
+document.getElementById("start").value = today;
 
-var date = 7
 
+
+var date = checkDoor - 20201200;
 for (var i = 0; i<date; i++) {
   document.querySelectorAll(".open")[i].addEventListener("click", function() {
     this.style.display = "none"
@@ -26,7 +37,7 @@ for (i; i < l; i++) {
   openButtons[i].style.display = "none";
 }
 
-var uploadButtons = document.querySelectorAll(".upload");
+var uploadButtons = document.querySelectorAll(".dropfield");
 i = 0;
 l = uploadButtons.length;
  
@@ -45,7 +56,7 @@ for (i; i < l; i++) {
   openButtons[i].style.display = "block";
 }
 
-var uploadButtons = document.querySelectorAll(".upload");
+var uploadButtons = document.querySelectorAll(".dropfield");
 i = 0;
 l = uploadButtons.length;
    
@@ -53,6 +64,7 @@ for (i; i < l; i++) {
   uploadButtons[i].style.display = "none";
 }
 }
+
 
 
 //Dropzone Upload nicht funktional (TEST)
