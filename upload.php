@@ -1,10 +1,8 @@
 <?php
 
-$target_dir = "images/upload/";
-$target_file = $target_dir.basename($_FILES['file']['name']);
+$target_dir = "images/";
+$target_file = $target_dir.$_POST["nr"].".jpg";
 
-if(move_uploaded_file($_FILES['file']['tmp_name'], $target_file)) {
-    $status = 1;
-}
+move_uploaded_file($_FILES['file']['tmp_name'], $target_file) 
 
 ?>

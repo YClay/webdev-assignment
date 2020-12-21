@@ -1,3 +1,39 @@
+
+/*
+Dropzone.options.myAwesomeDropzone = {
+  autoProcessQueue: true,
+  maxFilesize: 10, //--> max. 10 MB pro Datei!
+  maxFiles: 1,
+  clickable: true,
+  acceptedFiles: 'image/*',
+  sending: function(file, xhr, formData) {
+         formData.append("nr", this.element.name);
+         
+  }
+      
+};*/
+
+// Neue Version
+Dropzone.options.myAwesomeDropzone = {
+  autoProcessQueue: true,
+  maxFilesize: 10, //--> max. 10 MB pro Datei!
+  maxFiles: 1,
+  clickable: true,
+  acceptedFiles: 'image/*',
+  sending: function(file, xhr, formData) {
+         formData.append("nr", this.element.name);
+ 
+  },
+  init: function() {
+        this.on("complete", function(file) { 
+              document.querySelector("." + this.element.name + "-img").style.backgroundImage="url(images/"+this.element.name+".jpg?t=" + Math.random() + ")"
+            this.removeAllFiles()
+        });
+  }
+ 
+ };
+
+
 //Datumsmanipulation
 function newDate() {
   var x = document.getElementById("mydate").value;
