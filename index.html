@@ -4,9 +4,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adventskalendar</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="dropzone/dropzone.min.css">
 </head>
 
 <body class="background">
+
+    <!-- Toggle Admin Mode -->
+    <section class="toolbar">
+        <div class="editing_mode">
+            <!-- <text ID="text_toggle_admin">Toggle Admin-Mode</text> -->
+            <button type="button" ID="admin_on" onclick="activateAdmin()">Admin-Mode an</button>
+            <button type="button" ID="admin_off" onclick="deactivateAdmin()">Admin-Mode aus</button>
+        </div>
+    </section>
+
+
+
     <!-- Cards -->
     <section class="calendar">
         <div class="card">
@@ -17,6 +30,7 @@
             </div>
             <div class="content">
                 <button class="one open">Open</button>
+                <button class="picture upload" style="display: none">Upload</button>
             </div>
         </div>
         <div class="card">
@@ -27,6 +41,7 @@
             </div>
             <div class="content">
                 <button class="two open">Open</button>
+                <button class="picture upload" style="display: none">Upload</button>
             </div>
         </div>
         <div class="card">
@@ -37,6 +52,7 @@
             </div>
             <div class="content">
                 <button class="three open">Open</button>
+                <button class="picture upload" style="display: none">Upload</button>
             </div>
         </div>
         <div class="card">
@@ -47,6 +63,7 @@
             </div>
             <div class="content">
                 <button class="four open">Open</button>
+                <button class="picture upload" style="display: none">Upload</button>
             </div>
         </div>
         <div class="card">
@@ -57,6 +74,7 @@
             </div>
             <div class="content">
                 <button class="five open">Open</button>
+                <button class="picture upload" style="display: none">Upload</button>
             </div>
         </div>
         <div class="card">
@@ -67,6 +85,7 @@
             </div>
             <div class="content">
                 <button class="six open">Open</button>
+                <button class="picture upload" style="display: none">Upload</button>
             </div>
         </div>
         <div class="card">
@@ -77,6 +96,7 @@
             </div>
             <div class="content">
                 <button class="seven open">Open</button>
+                <button class="picture upload" style="display: none">Upload</button>
             </div>
         </div>
         <div class="card">
@@ -87,6 +107,7 @@
             </div>
             <div class="content">
                 <button class="eight open">Open</button>
+                <button class="picture upload" style="display: none">Upload</button>
             </div>
         </div>
         <div class="card">
@@ -97,6 +118,7 @@
             </div>
             <div class="content">
                 <button class="nine open">Open</button>
+                <button class="picture upload" style="display: none">Upload</button>
             </div>
         </div>
         <div class="card">
@@ -107,6 +129,7 @@
             </div>
             <div class="content">
                 <button class="ten open">Open</button>
+                <button class="picture upload" style="display: none">Upload</button>
             </div>
         </div>
         <div class="card">
@@ -117,6 +140,7 @@
             </div>
             <div class="content">
                 <button class="eleven open">Open</button>
+                <button class="picture upload" style="display: none">Upload</button>
             </div>
         </div>
         <div class="card">
@@ -127,6 +151,7 @@
             </div>
             <div class="content">
                 <button class="twelve open">Open</button>
+                <button class="picture upload" style="display: none">Upload</button>
             </div>
         </div>
         <div class="card">
@@ -137,6 +162,7 @@
             </div>
             <div class="content">
                 <button class="thirteen open">Open</button>
+                <button class="picture upload" style="display: none">Upload</button>
             </div>
         </div>
         <div class="card">
@@ -147,6 +173,7 @@
             </div>
             <div class="content">
                 <button class="fourteen open">Open</button>
+                <button class="picture upload" style="display: none">Upload</button>
             </div>
         </div>
         <div class="card">
@@ -157,6 +184,7 @@
             </div>
             <div class="content">
                 <button class="fifteen open">Open</button>
+                <button class="picture upload" style="display: none">Upload</button>
             </div>
         </div>
         <div class="card">
@@ -167,6 +195,7 @@
             </div>
             <div class="content">
                 <button class="sixteen open">Open</button>
+                <button class="picture upload" style="display: none">Upload</button>
             </div>
         </div>
         <div class="card">
@@ -177,6 +206,7 @@
             </div>
             <div class="content">
                 <button class="seventeen open">Open</button>
+                <button class="picture upload" style="display: none">Upload</button>
             </div>
         </div>
         <div class="card">
@@ -187,6 +217,7 @@
             </div>
             <div class="content">
                 <button class="eighteen open">Open</button>
+                <button class="picture upload" style="display: none">Upload</button>
             </div>
         </div>
         <div class="card">
@@ -197,6 +228,7 @@
             </div>
             <div class="content">
                 <button class="nineteen open">Open</button>
+                <button class="picture upload" style="display: none">Upload</button>
             </div>
         </div>
         <div class="card">
@@ -207,6 +239,7 @@
             </div>
             <div class="content">
                 <button class="twenty open">Open</button>
+                <button class="picture upload" style="display: none">Upload</button>
             </div>
         </div>
         <div class="card">
@@ -217,6 +250,7 @@
             </div>
             <div class="content">
                 <button class="twentyone open">Open</button>
+                <button class="picture upload" style="display: none">Upload</button>
             </div>
         </div>
         <div class="card">
@@ -227,6 +261,7 @@
             </div>
             <div class="content">
                 <button class="twentytwo open">Open</button>
+                <button class="picture upload" style="display: none">Upload</button>
             </div>
         </div>
         <div class="card">
@@ -237,6 +272,7 @@
             </div>
             <div class="content">
                 <button class="twentythree open">Open</button>
+                <button class="picture upload" style="display: none">Upload</button>
             </div>
         </div>
         <div class="card">
@@ -247,11 +283,36 @@
             </div>
             <div class="content">
                 <button class="twentyfour open">Open</button>
+                <button class="picture upload" style="display: none">Upload</button>
             </div>
         </div>
+    
+
+
+    <!-- Dropzone 
+    <div class="container">
+        <form action="./dropzone/uploads"
+        class="dropzone"
+        id="my_dropzone"></form>  
+    </div>
+    -->
+
+
+    <!-- Test Dropzone -->
+    <form action="upload.php" class="dropzone"></form>
+
+
+    
+
+
+
     </section>
     <!-- Cards Ende -->
+
     
+   
+    <script type="text/javascript" src="./dropzone/dropzone.min.js"></script>
+
 </body>
 <script src="index.js"></script>
 </html>
