@@ -120,7 +120,7 @@ button:hover {
 .one-img {
     width: 250px;
     height: 320px;
-    background-image: url(images/one.png);
+    background-image: url(images/one.jpg);
     position: absolute;
     display: none;
 }
@@ -176,7 +176,7 @@ button:hover {
 .eight-img {
     width: 250px;
     height: 320px;
-    background-image: url(images/eight.jpeg);
+    background-image: url(images/eight.jpg);
     position: absolute;
     display: none;
 }
@@ -280,7 +280,7 @@ button:hover {
 .twentyone-img {
     width: 250px;
     height: 320px;
-    background-image: url(images/twentyone.png);
+    background-image: url(images/twentyone.jpg);
     position: absolute;
     display: none;
 }
