@@ -1,4 +1,5 @@
-// Neue Version
+
+// Dropzone
 Dropzone.options.myAwesomeDropzone = {
   autoProcessQueue: true,
   maxFilesize: 10, //--> max. 10 MB pro Datei!
@@ -53,8 +54,7 @@ for (var i = 0; i<24; i++) {
 }
 
 
-
-// Datumsabfrage für aktueller Tag
+// Datumsabfrage für aktuellen Tag
 var today = new Date();
 var dd = String(today.getDate()).padStart(2, '0');
 var mm = String(today.getMonth() + 1).padStart(2, '0'); //Januar ist 0!
@@ -67,8 +67,7 @@ document.getElementById("mydate").value = today;
 
 
 
-// Datum manipulieren
-// Check which open
+// Datumsmanipulation für aktuellen Tag
 var date = checkDoor - 20201200;
 for (var i = date; i < 24; i++) {
   document.querySelectorAll(".open")[i].disabled = "true"
@@ -86,15 +85,7 @@ for (var i = 1; i <= date; i++) {
 
 // 2 Buttons für Admin Mode an und aus
 function activateAdmin() {    //Admin-Mode an
-/*
-var openButtons = document.querySelectorAll(".open");
-i = 0;
-l = openButtons.length;
- 
-for (i; i < l; i++) {
-  openButtons[i].style.display = "none";
-}
-*/
+
 var uploadButtons = document.querySelectorAll(".dropfield");
 i = 0;
 l = uploadButtons.length;
@@ -106,15 +97,7 @@ for (i; i < l; i++) {
 
 
 function deactivateAdmin() {    //Admin-Mode aus
-/*
-var openButtons = document.querySelectorAll(".open");
-i = 0;
-l = openButtons.length;
-   
-for (i; i < l; i++) {
-  openButtons[i].style.display = "block";
-}
-*/
+
 var uploadButtons = document.querySelectorAll(".dropfield");
 i = 0;
 l = uploadButtons.length;

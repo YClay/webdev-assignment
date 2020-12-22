@@ -6,69 +6,21 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.dropzone {
-    bottom: 100px;
-    height: 100px;
-    width: 200px;
-    position: relative;
-    top: -65px;
-    margin: 0%;
-    border: none;
-}
-
-.open {
-    top: 90%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    position: absolute;
-    background-color: #5a0101;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 40px;
-    border: none;
-}
-
-.confirmdate {
-    border-radius: 40px;
-    padding: 5px;
-    border: none;
-    margin-left: 10px;
-}
-
-.upload {
-    background-color: #5a0101;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 40px;
-    border: none;
-}
-
-.change {
-    padding: 10px 20px;
-    border-radius: 40px;
-    border: none;
-    background-color: #5a0101;
-    color: #fff;
-    margin-left: 50px;
-    margin-right: 50px;
-}
-
-.content {
-    margin: 0;
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-
+/* body */
 .background {
     background: url(calendar.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
+h2 {
+    position: relative;
+    color: #fff;
+    font-size: 4.5em;
+    padding: 30px 0;
+}
+
+/* Navbar */
 .toolbar {
     height: 50px;
     background-color: rgb(37, 37, 37);
@@ -79,31 +31,69 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 100%;
-    margin-left: 0%;
-    margin-right: 0%;
     margin-bottom: 5px;
     display: flex;
     flex-wrap: wrap;
 }
 
-.toggle_admin {
+/* First part of navbar */
+.datenav {
+    margin-right: 30px;
+}
+
+.pickdate {
+    width: 130px;
+    border: none;
+    border-radius: 40px;
+    padding: 2.5px;
+    margin: 0;
+}
+
+.confirmdate {
+    width: 130px;
+    border-radius: 40px;
+    padding: 5px;
+    border: none;
+}
+
+/* Second part of navbar */
+.editing_mode {
+    margin-left: 30px;
+}
+
+.change {
+    padding: 5px;
+    width: 130px;
+    border-radius: 40px;
+    border: none;
+    background-color: #fff;
+    color:  black;
+}
+
+/* Navbar hover */
+.confirmdate:hover {
     background-color: #5a0101;
     color: #fff;
 }
 
+.change:hover {
+    background-color: #5a0101;
+    color: #fff;
+}
+/* Navbar Ende*/
+
+/* Cards  */
 .calendar {
     position: relative;
     top: 50;
     padding-top: 0px;
-    width: 100%;
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 60%;
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-bottom: 500px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 300px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -120,13 +110,39 @@
     transition: 0.5s;  
 }
 
-h2 {
-    position: relative;
-    color: #fff;
-    font-size: 4.5em;
-    padding: 30px 0;
+.content {
+    margin: 0;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
+.open {
+    top: 90%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background-color: #5a0101;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 40px;
+    border: none;
+}
+
+.dropzone {
+    bottom: 100px;
+    height: 100px;
+    width: 200px;
+    position: relative;
+    top: -65px;
+    margin: 0%;
+    border: none;
+}
+
+/* Cards hover */
 .calendar .card:hover {
     transform: scale(1.1);
 }
@@ -135,10 +151,7 @@ button:hover {
     background-color: rgba(161, 7, 7, 0.973);
 }
 
-.container .dropzone {
-    border:2px dashed blue;
-}
-
+/* Images */
 .one-img {
     width: 250px;
     height: 320px;
@@ -330,7 +343,9 @@ button:hover {
     position: absolute;
     display: none;
 }
+/* Images Ende */
 
+/* Circles */
 .circle-1 {
     z-index: 1;
     position: relative;
@@ -580,3 +595,58 @@ button:hover {
     clip-path: circle(130px at center 0);
     text-align: center;
 }
+/* Circles Ende */
+/* Cards Ende */
+
+/* Screen size */
+@media only screen and (max-width: 990px) {
+    .datenav {
+        margin-right: 0;
+        margin-top: 10px;
+    }
+    
+    .editing_mode {
+        margin-top: 10px;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .toolbar {
+        height: 80px;
+        flex-direction: column;
+    }
+    
+    .calendar {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    .calendar .card {
+        margin: 15px;
+    }
+  }
+
+@media only screen and (max-width: 570px) {
+    .calendar {
+        width: 96%;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+   
+    .calendar .card {
+        width: 150px;
+        height: 280px;
+        margin: 15px;
+    }
+
+    .open {
+        padding: 12px 35px;
+    }
+
+    .dropzone {
+        height: 50px;
+        width: 100px;
+    }
+}
+/* Screen size Ende */

@@ -12,15 +12,17 @@
     <!-- Toolbar -->
     <section class="toolbar">
         <!-- Datumsfeld + Submit-Button -->
-        <input type="date" id="mydate" min="2020-12-01" max="2020-12-24" value="">
-        <button class="confirmdate" onclick="myDate()">Datum bestätigen</button>
-
+        <div class="datenav">
+            <input class="pickdate" type="date" id="mydate" min="2020-12-01" max="2020-12-24" value="">
+            <button class="confirmdate" onclick="myDate()">Datum bestätigen</button>
+        </div>
         <!-- Toggle Admin Mode-->
         <div class="editing_mode">  
             <button  class="change" ID="admin_on" onclick="activateAdmin()">Change on</button>
             <button  class="change" ID="admin_off" onclick="deactivateAdmin()">Change off</button>
         </div>
     </section>
+    <!-- Toolbar Ende -->
 
     <!-- All Cards -->
     <section class="calendar">
@@ -336,16 +338,12 @@
                 <div class="dropfield" style="display: none"><form  method="post" enctype="multipart/form-data" name="twentyfour" id="myAwesomeDropzone" action="upload.php" class="dropzone"></form></div>
             </div>
         </div>
-    
-
-
-  
 
     </section>
     <!-- Cards Ende -->
-   
-    <script type="text/javascript" src="./dropzone/dropzone.min.js"></script>
-
 </body>
+
+<!-- javascript  -->
+<script type="text/javascript" src="./dropzone/dropzone.min.js"></script>
 <script src="index.js"></script>
 </html>
