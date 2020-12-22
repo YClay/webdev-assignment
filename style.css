@@ -6,7 +6,22 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.dropzone {
+    bottom: 100px;
+    height: 100px;
+    width: 200px;
+    position: relative;
+    top: -65px;
+    margin: 0%;
+    border: none;
+}
+
 .open {
+    top: 90%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
     background-color: #5a0101;
     color: #fff;
     padding: 10px 20px;
