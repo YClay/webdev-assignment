@@ -1,5 +1,4 @@
-
-// Dropzone
+// Dropzone Konfiguration
 Dropzone.options.myAwesomeDropzone = {
   autoProcessQueue: true,
   maxFilesize: 10, //--> max. 10 MB pro Datei!
@@ -16,7 +15,6 @@ Dropzone.options.myAwesomeDropzone = {
             this.removeAllFiles()
         });
   }
- 
  };
 
 
@@ -28,7 +26,6 @@ function myDate() {
 
   for (var i = 1; i <= newdatecal; i++) {
     document.querySelector(".circle-" + i.toString()).style.background = "#143d02"
-
   }
   for (var i = newdatecal + 1;i < 25; i++) {
     document.querySelector(".circle-" + i.toString()).style.background = "#5a0101"
@@ -54,7 +51,7 @@ for (var i = 0; i<24; i++) {
 }
 
 
-// Datumsabfrage für aktuellen Tag
+// Datumsabfrage fuer aktuellen Tag
 var today = new Date();
 var dd = String(today.getDate()).padStart(2, '0');
 var mm = String(today.getMonth() + 1).padStart(2, '0'); //Januar ist 0!
@@ -66,8 +63,7 @@ today = yyyy + '-' + mm + '-' + dd;
 document.getElementById("mydate").value = today;
 
 
-
-// Datumsmanipulation für aktuellen Tag
+// Datumsmanipulation fuer aktuellen Tag
 var date = checkDoor - 20201200;
 for (var i = date; i < 24; i++) {
   document.querySelectorAll(".open")[i].disabled = "true"
@@ -82,8 +78,7 @@ for (var i = 1; i <= date; i++) {
 }
 
 
-
-// 2 Buttons für Admin Mode an und aus
+// 2 Buttons fuer Admin Mode (an und aus)
 function activateAdmin() {    //Admin-Mode an
 
 var uploadButtons = document.querySelectorAll(".dropfield");
@@ -94,7 +89,6 @@ for (i; i < l; i++) {
   uploadButtons[i].style.display = "block";
 }
 } 
-
 
 function deactivateAdmin() {    //Admin-Mode aus
 

@@ -6,7 +6,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* body */
+/* Body */
 .background {
     background: url(calendar.jpg);
     background-size: cover;
@@ -36,7 +36,7 @@ h2 {
     flex-wrap: wrap;
 }
 
-/* First part of navbar */
+/* Erster Part der Navbar */
 .datenav {
     margin-right: 30px;
 }
@@ -56,7 +56,7 @@ h2 {
     border: none;
 }
 
-/* Second part of navbar */
+/* Zweiter Part der Navbar */
 .editing_mode {
     margin-left: 30px;
 }
@@ -80,9 +80,9 @@ h2 {
     background-color: #5a0101;
     color: #fff;
 }
-/* Navbar Ende*/
+/* Navbar Ende */
 
-/* Cards  */
+/* Cards */
 .calendar {
     position: relative;
     top: 50;
@@ -151,7 +151,7 @@ button:hover {
     background-color: rgba(161, 7, 7, 0.973);
 }
 
-/* Images */
+/* Bilder */
 .one-img {
     width: 250px;
     height: 320px;
@@ -343,9 +343,9 @@ button:hover {
     position: absolute;
     display: none;
 }
-/* Images Ende */
+/* Bilder Ende */
 
-/* Circles */
+/* Halbkreise auf den Tuerchen */
 .circle-1 {
     z-index: 1;
     position: relative;
@@ -595,7 +595,7 @@ button:hover {
     clip-path: circle(130px at center 0);
     text-align: center;
 }
-/* Circles Ende */
+/* Halbkreise Ende */
 /* Cards Ende */
 
 /* Screen size */
